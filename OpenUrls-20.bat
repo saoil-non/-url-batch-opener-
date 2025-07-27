@@ -28,10 +28,10 @@ if %total%==0 (
     exit /b 1
 )
 
-:: 计算组数
-set /a groups=(total+4)/5
+:: 计算组数（每组20个）
+set /a groups=(total+19)/20
 
-echo 共有 %total% 个网址，分为 %groups% 组（每组5个）
+echo 共有 %total% 个网址，分为 %groups% 组（每组20个）
 echo.
 
 :getGroup
@@ -53,8 +53,8 @@ if %groupNum% gtr %groups% (
 )
 
 :: 计算起止索引
-set /a start=(groupNum-1)*5+1
-set /a end=start+4
+set /a start=(groupNum-1)*20+1
+set /a end=start+19
 if %end% gtr %total% set end=%total%
 
 echo 正在打开第 %groupNum% 组（第 %start% 到 %end% 个网址）...
@@ -83,8 +83,8 @@ if /i "!continue!"=="n" (
 
 :: 更新组号并打开下一组
 set /a groupNum+=1
-set /a start=(groupNum-1)*5+1
-set /a end=start+4
+set /a start=(groupNum-1)*20+1
+set /a end=start+19
 if %end% gtr %total% set end=%total%
 
 echo.
