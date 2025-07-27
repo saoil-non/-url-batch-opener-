@@ -9,8 +9,8 @@ $RECYCLE.BIN/
 *.log
 
 # 用户数据文件（可选择是否忽略）
-# urls.txt
-# urls.xlsx
+urls.txt
+urls.xlsx
 
 # IDE 文件
 .vscode/
