@@ -1,0 +1,21 @@
+# Windows 系统文件
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# 临时文件
+*.tmp
+*.temp
+*.log
+
+# 用户数据文件（可选择是否忽略）
+# urls.txt
+# urls.xlsx
+
+# IDE 文件
+.vscode/
+.idea/
+
+# 备份文件
+*.bak
+*.backup
